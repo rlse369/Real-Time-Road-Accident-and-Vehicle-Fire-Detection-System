@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>Real Time Road Accident and Fire Detection</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      </head>
+      <body>
+        <h1>Real Time Road Accident and Fire Detection</h1>
+        <div class="video-container">
+            <img id="video-stream" src="{{ url_for('real_time_detection') }}" width="640" height="480">
+        </div>
+        <script>
+            // Add any JavaScript code here
+            const videoElement = document.getElementById('video-stream');
+
+            const eventSource = new EventSource('/real_time_detection');
+
+            eventSource.addEventListener('message', (event) => {
+                const frame = event.data;
+                videoElement.src = 'data:image/jpeg;base64,' + frame;
+            });
+
+            eventSource.addEventListener('error', (event) => {
+                console.error('Error occurred with Server-Sent Events.', event);
+                eventSource.close();
+            });
+        </script>
+      </body>
+    </html>

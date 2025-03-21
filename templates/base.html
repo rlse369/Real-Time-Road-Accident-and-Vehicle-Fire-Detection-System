@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Images</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Result Images</h1>
+    <div id="image-container">
+        {% for result_image in result_images %}
+            <div class="image-wrapper">
+                <img src="{{result_image}}" alt="{{result_image}}">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

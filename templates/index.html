@@ -1,0 +1,114 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accident Detection System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F5DC;
+
+        }
+
+        .header {
+            width: 100%;
+            height: 80px;
+            background: ;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 60px;
+            font-weight: bold;
+            color:#0A043C;
+            padding-top: 20px;
+        }
+
+        #rectangle{
+        	position: absolute;
+            width: 372px;
+            height: 300px;
+            left: 180px;
+            top: 170px;
+            background: #D9D9D9;
+            /* border-radius: 20px; */
+            position: absolute;
+            border: solid;
+            border-width: 48px;
+            border-color: #13292A;
+            padding: 20px;
+        }
+        .h-secondary{
+            font-size: 1.8rem;
+            padding: 29px;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        .center{
+            text-align: center;
+        }
+
+
+        .btn {
+            background-color: #d2d6e6;
+            color: #2e2222;
+            border-radius: 20px;
+            font-size: 18px;
+            padding: 12px 20px;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color:#0A043C;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+	<!-- header -->
+	<div class="bg">
+		<div class="header">
+			<h1 class="headtxt">Road Accident Detection System</h1>
+		</div>
+	</div>
+
+
+    <!--Real time section-->
+  <div style="display:flex;flex-direction:column; align-items:center;
+  justify-content:center;
+  text-align:center;">
+    <div class="animation-area" style="height: 100vh;width:100%;display:flex;flex-direction:column; align-items:center;
+    justify-content:center;text-align:center;">
+    <div class="animation-area .container-sm" style="height: 70vh;width:70%;display:flex;flex-direction:column; align-items:center;
+    justify-content:center;text-align:center;background-color;margin:30px;color:#0A043C; border-style:solid; border-color:#0A043C; background-color: #F5FFFA; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <p style="font-size:xx-large;padding-bottom:50px;" >Real time video detection</p>
+    <p style="font-size:x-large;padding-bottom:20px;">To detect fire and accident using the webcam feed</p>
+    <button onclick="location.href='/video_detection'" class="btn">Start Detection</button>
+</div>
+  </div>
+</div>
+
+ <!--manual section-->
+
+ <div style="display:flex;flex-direction:column; align-items:center;
+ justify-content:center;
+ text-align:center;">
+   <div class="animation-area" style="height: 100vh;width:100%;display:flex;flex-direction:column; align-items:center;
+   justify-content:center;text-align:center; ">
+   <div class="animation-area .container-sm" style="height: 70vh;width:70%;display:flex;flex-direction:column; align-items:center;
+   justify-content:center;text-align:center;background-color:;margin:30px;color:#0A043C; border-style:solid; border-color:#0A043C; background-color: #F5FFFA;box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);">
+   <p style="font-size:xx-large;padding-bottom:50px;">Manually Upload Image</p>
+   <p style="font-size:x-large;padding-bottom:20px;">To detect the accident images you uploaded</p>
+   <button onclick="location.href='/upload'" class="btn">Start Detection</button>
+
+</div>
+ </div>
+ </div>
+
+
+</body>
+</html>
